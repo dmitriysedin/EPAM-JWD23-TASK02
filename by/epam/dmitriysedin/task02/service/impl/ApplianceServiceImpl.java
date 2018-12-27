@@ -15,7 +15,7 @@ public class ApplianceServiceImpl implements ApplianceService {
 	public <E> Appliance find(Criteria<E> criteria) throws ServiceException {
 
 		if (!Validator.criteriaValidator(criteria)) {
-			//throw new ValidationException
+			throw new ServiceException("Value of criteria must be positive");
 		}
 
 		DAOFactory factory = DAOFactory.getInstance();
