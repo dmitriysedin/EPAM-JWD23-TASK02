@@ -6,9 +6,9 @@ import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Validator {
+public class CriteriaValidator {
 	
-	public static <E> boolean criteriaValidator(Criteria<E> criteria) {
+	public static <E> boolean isValidate(Criteria<E> criteria) {
 
 		Iterator<Map.Entry<E, Object>> iter = criteria.getCriteria().entrySet().iterator();
 

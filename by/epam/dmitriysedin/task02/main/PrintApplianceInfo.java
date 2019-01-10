@@ -2,17 +2,17 @@ package by.epam.dmitriysedin.task02.main;
 
 import by.epam.dmitriysedin.task02.entity.Appliance;
 
+import java.util.Arrays;
+
 public class PrintApplianceInfo {
 	
-	public static void print(Appliance appliance) {
+	public static void print(Appliance[] appliance) {
 
-		Appliance[] appliancesArray = appliance.getArrayOfAppliance();
-
-        if(appliancesArray == null) {
+        if(appliance == null) {
             System.out.println("There is no matches");
         } else {
-            for (Appliance app : appliancesArray) {
-                System.out.println(appliance);
+            for (Appliance app : appliance) {
+                System.out.println(Arrays.toString(appliance));
             }
         }
     }

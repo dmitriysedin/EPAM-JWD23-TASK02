@@ -15,21 +15,20 @@ import java.util.Map;
 
 public class ApplianceDAOImpl implements ApplianceDAO {
 
-    private static final String FILE_NAME = "D:\\EPAM_JWD23_COMMON\\JWD23_Appliance\\src\\main\\" +
-            "resources\\appliances_db.txt";
+    private static final String FILE_NAME = "main\\resources\\appliances_db.txt";
 
 	@Override
-	public <E> Appliance find(Criteria<E> criteria) throws DAOException{
+	public <E> Appliance[] find(Criteria<E> criteria) throws DAOException{
 
 		String[] readResult = ReadFromFile.readFromFile(FILE_NAME, criteria);
 
-        Appliance appliance = new Appliance();
+        Appliance[] result = null;
 
         if(readResult.length == 0){
-            return appliance;
+            return result;
         }
 
-		String nameOfApplianceType = getTypeOfAppliance(criteria);
+        String nameOfApplianceType = getTypeOfAppliance(criteria);
 
         List<Appliance> applianceList = new ArrayList<>();
 
@@ -41,10 +40,9 @@ public class ApplianceDAOImpl implements ApplianceDAO {
             applianceList.add(appliances);
         }
 
-        Appliance[] result = new Appliance[applianceList.size()];
-        appliance.setArrayOfAppliance(applianceList.toArray(result));
+        result = new Appliance[applianceList.size()];
 
-        return appliance;
+        return applianceList.toArray(result);
 	}
 
 	private <E> String getTypeOfAppliance(Criteria<E> criteria){

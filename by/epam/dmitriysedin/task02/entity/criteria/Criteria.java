@@ -14,4 +14,27 @@ public class Criteria<E> {
 	public Map<E, Object> getCriteria() {
 		return criteria;
 	}
+
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (!(o instanceof Criteria)) return false;
+
+		Criteria<?> criteria1 = (Criteria<?>) o;
+
+		return getCriteria() != null ? getCriteria().equals(criteria1.getCriteria()) : criteria1.getCriteria() == null;
+	}
+
+	@Override
+	public int hashCode() {
+		return getCriteria() != null ? getCriteria().hashCode() : 0;
+	}
+
+	@Override
+	public String toString() {
+		return "Criteria{" +
+				"criteria=" + criteria +
+				'}';
+	}
+
 }

@@ -1,6 +1,6 @@
 package by.epam.dmitriysedin.task02.entity;
 
-public class Speakers extends Appliance{
+public class Speakers implements Appliance{
 
     private double powerConsumption;
     private double numberOfSpeakers;

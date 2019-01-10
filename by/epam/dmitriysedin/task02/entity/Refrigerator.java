@@ -1,6 +1,6 @@
 package by.epam.dmitriysedin.task02.entity;
 
-public class Refrigerator extends Appliance{
+public class Refrigerator implements Appliance{
 
     private double powerConcumption;
     private double weight;

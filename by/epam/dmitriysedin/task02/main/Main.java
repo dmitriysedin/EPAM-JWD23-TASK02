@@ -6,10 +6,11 @@ import by.epam.dmitriysedin.task02.service.ApplianceService;
 import by.epam.dmitriysedin.task02.service.ServiceFactory;
 import by.epam.dmitriysedin.task02.entity.Appliance;
 
+
 public class Main {
 
 	public static void main(String[] args) throws Exception {
-		Appliance appliance;
+		Appliance[] appliance;
 
 		ServiceFactory factory = ServiceFactory.getInstance();
 		ApplianceService service = factory.getApplianceService();
@@ -17,7 +18,7 @@ public class Main {
 		//////////////////////////////////////////////////////////////////
 
 		Criteria<SearchCriteria.Oven> criteriaOven = new Criteria<SearchCriteria.Oven>();
-		criteriaOven.add(SearchCriteria.Oven.CAPACITY, -32.025);
+		criteriaOven.add(SearchCriteria.Oven.CAPACITY, 32.025);
 
 		appliance = service.find(criteriaOven);
 

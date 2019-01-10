@@ -1,6 +1,6 @@
 package by.epam.dmitriysedin.task02.entity;
 
-public class Oven extends Appliance{
+public class Oven implements Appliance{
 
     private double powerConsumption;
     private double weight;

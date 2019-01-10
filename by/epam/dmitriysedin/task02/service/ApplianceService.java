@@ -6,6 +6,6 @@ import by.epam.dmitriysedin.task02.service.exception.ServiceException;
 
 public interface ApplianceService {	
 	
-	<E> Appliance find(Criteria<E> criteria) throws ServiceException;
+	<E> Appliance[] find(Criteria<E> criteria) throws ServiceException;
 	
 }

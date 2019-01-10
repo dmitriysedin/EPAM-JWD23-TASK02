@@ -1,6 +1,6 @@
 package by.epam.dmitriysedin.task02.entity;
 
-public class Laptop extends Appliance{
+public class Laptop implements Appliance{
 
 	private double batteryCapacity;
 	private String operationSystem;

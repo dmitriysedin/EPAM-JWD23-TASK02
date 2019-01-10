@@ -1,6 +1,6 @@
 package by.epam.dmitriysedin.task02.entity;
 
-public class VacuumCleaner extends Appliance{
+public class VacuumCleaner implements Appliance{
 
     private double powerConsumption;
     private String filterType;

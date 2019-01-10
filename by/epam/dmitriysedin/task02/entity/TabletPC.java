@@ -1,6 +1,6 @@
 package by.epam.dmitriysedin.task02.entity;
 
-public class TabletPC extends Appliance{
+public class TabletPC implements Appliance{
 
     private double batteryCapacity;
     private double displayInches;
