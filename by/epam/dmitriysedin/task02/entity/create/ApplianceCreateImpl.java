@@ -1,4 +1,4 @@
-package by.epam.dmitriysedin.task02.entity.factory;
+package by.epam.dmitriysedin.task02.entity.create;
 
 import by.epam.dmitriysedin.task02.entity.*;
 
@@ -6,9 +6,10 @@ import by.epam.dmitriysedin.task02.entity.*;
 /**
  * Created by Dmitriy Sedin on 22.12.2018.
  */
-public class ApplianceFactory {
+public class ApplianceCreateImpl implements ApplianceCreate{
 
-    public static Appliance getAppliance(String typeOfAppliance){
+    @Override
+    public Appliance createAppliance(String typeOfAppliance){
 
         Appliance appliance = null;
 

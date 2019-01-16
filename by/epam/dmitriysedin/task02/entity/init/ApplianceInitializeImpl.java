@@ -5,9 +5,9 @@ import by.epam.dmitriysedin.task02.entity.*;
 /**
  * Created by Dmitriy Sedin on 23.12.2018.
  */
-public class Initialize {
+public class ApplianceInitializeImpl implements ApplianceInitialize{
 
-    public static void init(Appliance appliance, String[] valueOfField){
+    public void init(Appliance appliance, String[] valueOfField){
         String nameOfClass = appliance.getClass().getSimpleName();
 
         switch (nameOfClass){
@@ -32,7 +32,7 @@ public class Initialize {
         }
     }
 
-    private static void ovenInit(Oven oven, String[] valueOfField){
+    private void ovenInit(Oven oven, String[] valueOfField){
 
         int indexOfPowerConsumption = 0;
         int indexOfWeight = 1;
@@ -49,7 +49,7 @@ public class Initialize {
         oven.setWidth(Double.parseDouble(valueOfField[indexOfWidth]));
     }
 
-    private static void laptopInit(Laptop laptop, String[] valueOfField){
+    private void laptopInit(Laptop laptop, String[] valueOfField){
 
         int indexOfBatteryCapacity = 0;
         int indexOfOperationSystem = 1;
@@ -66,7 +66,7 @@ public class Initialize {
         laptop.setDisplayInches(Double.parseDouble(valueOfField[indexOfDisplayInches]));
     }
 
-    private static void refrigeratorInit(Refrigerator refrigerator, String[] valueOfField){
+    private void refrigeratorInit(Refrigerator refrigerator, String[] valueOfField){
 
         int indexOfPowerConcumption = 0;
         int indexOfWeight = 1;
@@ -83,7 +83,7 @@ public class Initialize {
         refrigerator.setWidth(Double.parseDouble(valueOfField[indexOfWidth]));
     }
 
-    private static void speakersInit(Speakers speakers, String[] valueOfField){
+    private void speakersInit(Speakers speakers, String[] valueOfField){
 
         int indexOfPowerConsumption = 0;
         int indexOfNumberOfSpeakers = 1;
@@ -96,7 +96,7 @@ public class Initialize {
         speakers.setCordLength(Double.parseDouble(valueOfField[indexOfCordLength]));
     }
 
-    private static void tabletPCInit(TabletPC tabletPC, String[] valueOfField){
+    private void tabletPCInit(TabletPC tabletPC, String[] valueOfField){
 
         int indexOfBatteryCapacity = 0;
         int indexOfDisplayInches = 1;
@@ -111,7 +111,7 @@ public class Initialize {
         tabletPC.setColor(valueOfField[indexOfcolor]);
     }
 
-    private static void vacuumCleanerInit(VacuumCleaner vacuumCleaner, String[] valueOfField){
+    private void vacuumCleanerInit(VacuumCleaner vacuumCleaner, String[] valueOfField){
 
         int indexOfPowerConsumption = 0;
         int indexOfFilterType = 1;

@@ -12,6 +12,8 @@ public class Main {
 	public static void main(String[] args) throws Exception {
 		Appliance[] appliance;
 
+		Print print = new PrintApplianceInfo();
+
 		ServiceFactory factory = ServiceFactory.getInstance();
 		ApplianceService service = factory.getApplianceService();
 
@@ -22,7 +24,7 @@ public class Main {
 
 		appliance = service.find(criteriaOven);
 
-        PrintApplianceInfo.print(appliance);
+        print.print(appliance);
 
 		//////////////////////////////////////////////////////////////////
 
@@ -32,7 +34,7 @@ public class Main {
 
 		appliance = service.find(criteriaOven);
 
-		PrintApplianceInfo.print(appliance);
+		print.print(appliance);
 
 		//////////////////////////////////////////////////////////////////
 		
@@ -43,7 +45,7 @@ public class Main {
 
 		appliance = service.find(criteriaTabletPC);
 
-		PrintApplianceInfo.print(appliance);
+		print.print(appliance);
 
 	}
 
